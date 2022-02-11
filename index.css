@@ -1,0 +1,15 @@
+@font-face {
+    font-family: ;
+    src: url;
+}
+
+html {
+    background-color: rgba(0, 0, 0, 0);}
+
+body {margin:10vh;
+    font-family: "Times New Roman", serif;
+}
+    
+.home{position:relative;
+color: rgba(255, 255, 255, 0)}
+

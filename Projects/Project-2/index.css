@@ -1,0 +1,157 @@
+/* Basic page style  */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* Page structure */
+.wrapper {
+    position:relative;
+    width:100%;
+    display: flex;
+}
+.wrapper section {
+    min-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Floating Glitch */
+.aaa {
+    width: 6vw;
+    height:1vw;
+     animation: pulse .2s 0.1s infinite steps(13, end);
+    position:fixed;
+    opacity: 1;
+    }
+
+.bbb {
+    width: 3vw;
+    height:8vw;
+    animation: pulse .2s 0.1s infinite steps(13, end);
+    position:fixed;
+    opacity: 1;
+    }
+/* Heading */
+
+.heading {
+font-family: memoriam-inline-pro,sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size:60px;
+display: flex;
+justify-content: center;
+padding: 30px;
+}
+
+/* phone */
+@media (max-width: 400px) 
+{ 
+    .heading {
+        font-family: memoriam-inline-pro,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size:40px;
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+        }
+ }
+
+ /* KF */
+ @keyframes pulse {
+    0% {
+     background-color: #FFFFFF;
+     }
+     8% {
+         background-color: #FFFFFF;
+     }
+     16% {
+     background-color: #babbbf;
+     }
+     24% {
+     background-color: #ff0000;
+     }
+     32% {
+     background-color: #ff00f0;
+     }
+     40% {
+     background-color: #8a00ff;
+     }
+     48% {
+     background-color: #000cff;
+         }
+     56% {
+     background-color: #00deff;
+     }
+     64% {
+     background-color: #00ff00;
+     }
+     72% {
+     background-color: #f6ff00;
+     }
+     80% {
+     background-color: #ff9000;
+     }
+     88% {
+     background-color: #f9f9f9;
+   }
+     95% {
+     background-color: #FFFFFF;
+     }
+   100% {
+     background-color: #FFFFFF;
+   }
+ }
+
+ @keyframes blink {
+    0% {
+     background-color: #FFFFFF;
+     }
+     8% {
+         background-color: #FFFFFF;
+     }
+     16% {
+     background-color: #babbbf;
+     }
+     24% {
+     background-color: #ff0000;
+     }
+     32% {
+     background-color: #ff00f0;
+     }
+     40% {
+     background-color: #8a00ff;
+     }
+     48% {
+     background-color: #000cff;
+         }
+     56% {
+     background-color: #00deff;
+     }
+     64% {
+     background-color: #00ff00;
+     }
+     72% {
+     background-color: #f6ff00;
+     }
+     80% {
+     background-color: #ff9000;
+     }
+     88% {
+     background-color: #f9f9f9;
+   }
+     95% {
+     background-color: #FFFFFF;
+     }
+   100% {
+     background-color: #FFFFFF;
+   }
+ }

@@ -2,7 +2,30 @@
 $(document).ready(function(){
     animateDiv('.aaa');
     animateDiv('.bbb');
-
+    animateDiv('.ccc');
+    animateDiv('.ddd');
+    animateDiv('.eee');
+    animateDiv('.fff');
+    animateDiv('.ggg');
+    animateDiv('.hhh');
+    animateDiv('.iii');
+    animateDiv('.jjj');
+    animateDiv('.kkk');
+    animateDiv('.lll');
+    animateDiv('.mmm');
+    animateDiv('.nnn');
+    animateDiv('.ooo');
+    animateDiv('.ppp');
+    animateDiv('.qqq');
+    animateDiv('.rrr');
+    animateDiv('.sss');
+    animateDiv('.ttt');
+    animateDiv('.uuu');
+    animateDiv('.vvv');
+    animateDiv('.www');
+    animateDiv('.xxx');
+    animateDiv('.yyy');
+    animateDiv('.zzz');
 });
 
 function makeNewPosition(){
@@ -20,10 +43,9 @@ function makeNewPosition(){
 
 function animateDiv(myclass){
     var newq = makeNewPosition();
-    $(myclass).animate({ top: newq[0], left: newq[1] }, 800,   function(){
+    $(myclass).animate({ top: newq[0], left: newq[1] }, 1000,   function(){
       animateDiv(myclass);
     });
-
 };
 
 function calcSpeed(prev, next) {

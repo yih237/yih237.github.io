@@ -1,4 +1,4 @@
-
+//flyaroundbox
 $(document).ready(function(){
     animateDiv('.aaa');
     animateDiv('.bbb');
@@ -63,6 +63,3 @@ function calcSpeed(prev, next) {
 
   }
 
-
-
-  

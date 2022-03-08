@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="#" />
+    <title>The Disturbances of The Garden</title>
+    <link rel="stylesheet" href="./4.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/111863/flowers-2.jpg?d=1483661702136" crossorigin="anonymous">
+<canvas></canvas>
+<div class="wrapper">
+<div class="paragraphs">
+<p style="color:rgb(124, 34, 90)">
+  On <span id="a">August 3, 1492</span>—the day that Christopher Columbus set sail from Spain, later having a fatal encounter with the indigenous people he met in the “West Indies”—the world of the garden changed. That endeavor, to me, anyway, is the way the world we now live in began; it not only affected the domestic life of Europeans (where did the people in a Rembrandt painting get all that stuff they are piling on?) but suddenly they were well-off enough to be interested in more than sustenance, or the Tree of Life (agriculture); they could now be interested in cultivating the fruits of the Tree of Knowledge (horticulture).
+</p>
+<div class="p2">
+  Suddenly, the conquerors could do <span id="aa">more</span> than feed themselves; they could also see and desire things that were of no use apart from the pleasure that they produced. When Cortés saw Montezuma’s garden, a garden that incorporated a lake on which the capital of Mexico now sits, he didn’t mention the profusion of exotic flowers that we now grow with ease in our own gardens (dahlias, zinnias, marigolds).
+</div>
+<p style="color:rgb(72, 38, 85)">The garden figures prominently in the era of conquest, starting with Captain Cook’s voyage to regions that we now know as Australia, New Zealand, New Guinea, and Tahiti, its aim, ostensibly, to observe the rare event of the transit of Venus. On this trip, in 1768, the first of Cook’s three voyages around the world, he brought with him the botanist Joseph Banks and also Daniel Charles Solander, a student of Carolus Linnaeus. The two took careful notes on everything they saw. Banks decided that the breadfruit of the Pacific isles would make a good food for slaves on British-owned islands in the West Indies; the slaveholders were concerned with the amount of time it took the enslaved people to grow food to sustain themselves, and breadfruit grew with little cultivation. And so the Pacific Islands came to the West Indies. Banks also introduced the cultivation of tea (Camellia sinensis) to India.
+</p>
+<p>Then there is Lewis and Clark’s expedition from the Mississippi River to the Pacific Northwest. On that adventure, which was authorized by President Thomas Jefferson and was inspired by Cook’s scientific and commercial interests, the explorers listed numerous plant species that were unknown to John Bartram, botanist to King George III, who ruled the United States when it was still a colony. Bartram’s son, William, a fellow-botanist, later wrote a book about his own explorations, which is said to have influenced Wordsworth, Coleridge, and other English Romantic poets.
+</p>
+<p>
+  There now, look at that: I am meaning to show how I came to seek the garden in corners of the world far away from where I make one, and I have got lost in thickets of words. It was after I started to put seeds in the ground and noticed that sometimes nothing happened that I reached for a book. The first ones I read were about how to make a perennial border or how to get the best out of annuals—the kind of books for people who want to increase the value of their home—but these books were so boring. I found an old magazine meant to help white ladies manage their domestic lives in the nineteen-fifties much more interesting (that kind of magazine, along with a copy of “Mrs. Beeton’s Book of Household Management,” is worthy of a day spent in bed while the sun is shining its brightest outside). But where did plants, annual and perennial, pristinely set out in something called a border, and arranged sometimes according to color and sometimes according to height, come from? Those books had no answer for me. So one book led to another, and before long I had acquired (and read) so many books that it put a strain on my family’s budget. Resentment, a not unfamiliar feeling relating to the garden, set in.
+</p>
+<div class="pp">
+  I began to refer to plants by their Latin names, and this so irritated my editor at this magazine (Veronica Geng) that she made me promise that I would never learn the Latin name of another plant. I loved her very much, and so I promised that I would never do such a thing, but I did continue to learn the Latin names of plants and never told her. Betrayal, another feature of any garden.
+</div>
+</div>
+
+</section>
+  </body>
+  <footer>
+    <script>"use strict";
+
+      console.clear();
+      const cvs = document.querySelector('canvas'),
+            ctx = cvs.getContext('2d'),
+            img = document.querySelector('img');
+      if (img.complete) processImage(img);else img.onload = () => {
+        processImage(img);
+      };
+      
+      function processImage(img) {
+        let w = img.width,
+            h = img.height;
+        img.style.width = '260px';
+        cvs.width = w;
+        cvs.height = h;
+        ctx.drawImage(img, 0, 0);
+        let px = w * h,
+            data = ctx.getImageData(0, 0, w, h),
+            len = data.data.length,
+            rate = 0.01;
+        animate();
+      
+        function animate() {
+          requestAnimationFrame(animate);
+          let relLen = Math.floor(len / 4);
+      
+          for (let i = len - 5; i > 0; i -= 4) {
+            let relI = i * 0.25,
+                y = Math.floor(relI / w),
+                x = Math.random() > 0.1 ? relI + 1 : relI;
+            x = x % w + w * y;
+            x *= 4;
+            data.data[x] = data.data[i];
+            data.data[x + 1] = data.data[i + 1];
+            data.data[x + 2] = data.data[i + 2];
+            data.data[x + 3] = data.data[i + 3];
+          }
+      
+          ctx.putImageData(data, 0, 0);
+        }
+      }</script>
+      
+  </footer>
+</html>

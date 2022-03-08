@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+
+div {
+  display: block;
+}
+
+body{
+  background: rgb(137,101,150);
+  background: linear-gradient(180deg, rgba(137,101,150,1) 0%, rgba(159,90,255,1) 47%, rgba(197,31,251,1) 100%);
+}  
+/* text */
+.p1 {
+  font-family:  'Inconsolata', monospace;
+  letter-spacing: 1px; 
+  font-weight: 300;
+  padding: 10px;
+  position:absolute;
+  color: #bfc4db;
+  text-align: left;
+  line-height: 16pt;  
+  width: 582px;
+  position: absolute;
+  left:0;
+  right:0;
+  z-index: 2;
+}
+
+/* window */
+
+.box1 {
+  border-radius: 1px;
+  background: rgba(10,55,72,0.8);
+  box-shadow: 3px 3px rgb(255 0 140);
+  margin: 15px auto;
+  margin-left: auto; 
+  margin-right: auto;
+  border: 0 solid black;
+  height: 999px;
+  width: 600px;
+  position: absolute;
+  left:0;
+  right:0;
+  top:15px;
+  z-index: 1;
+}
+
+.winbar {
+  background-color: rgb(229 183 229);
+  border-bottom: 3px ridge rgb(116 111 117);
+  text-align: left;
+  width: calc(100% - 2px);
+  height: 26px;
+  color: black;
+}
+
+.winclose{
+  background-image: url(./Assets/closeicon.png);
+}
+.winfull{
+  background-image: url(./Assets/fullviewicon.png);
+}
+.winmin{
+  background-image: url(./Assets/minimizeicon.png);
+}
+.winupdate{
+  background-image: url(./Assets/updateicon.png);
+}
+.winclose, .winfull, .winupdate, .winmin {
+  background-position: center;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin: 4px 2px 4px 2px;
+  cursor: grab;
+}
+.wintext{
+  background-color: rgb(130 87 115);
+  border: 3px ridge rgb(116 96 120);
+  color: white;
+  width: calc( 100% - 96px );
+  height: 22px;
+  box-sizing: border-box;
+  margin: 2px;
+  float: right;
+  text-align: left;
+  padding-left: 4px;
+  vertical-align: middle;
+  line-height: 18px;
+  text-shadow: 1px 1px black;  
+  font-family:  'Inconsolata', monospace;
+}
+
+/* floating glitch */
+.glitchmove{
+  z-index: 20;
+}
+.aaa {
+  width: 2vw;
+  height:2vw;
+   animation: redd .2s 0.1s infinite steps(13, end);
+  position:fixed;
+  opacity: 1;
+  }
+
+.bbb {
+  width: 1vw;
+  height:5vw;
+  animation: pulse .15s 0.09s infinite steps(13, end);
+  position:fixed;
+  opacity: 0.6;
+  }
+
+.ccc {
+  width: 8vw;
+  height:1vw;
+  animation: bluue .1s 0.08s infinite steps(13, end);
+  position:fixed;
+  opacity: 1;
+}
+
+.ddd {
+  width: 3vw;
+  height:3vw;
+  animation: pulse .12s 0.02s infinite steps(13, end);
+  position:fixed;
+  opacity: 1;
+}
+
+.eee {
+  width: 6vw;
+  height:2vw;
+  animation: blink .09s 0.008s infinite steps(13, end);
+  position:fixed;
+  opacity: 1;  
+}
+
+.fff {
+  width: 4vw;
+  height: 4vw;
+  animation: redd .09s 0.019s infinite steps(13, end);
+  position:fixed;
+  opacity: 1;
+}
+
+.ggg {
+  width: 5vw;
+  height: 7vw;
+  animation: blink .09s 0.019s infinite steps(13, end);
+  position:fixed;
+  opacity: 1;
+}
+
+.hhh {
+  width: 3vw;
+  height: 3vw;
+  animation: bluue .09s 0.019s infinite steps(13, end);
+  position:fixed;
+  opacity: 1;
+}
+
+.iii {
+  width: 6vw;
+  height: 2vw;
+  animation: pulse .1s 0.08s infinite steps(13, end);
+  position:fixed;
+  opacity: 1;
+}
+
+.jjj {
+  width: 5vw;
+  height: 5vw;
+  animation: blink .09s 0.019s infinite steps(13, end);
+  position:fixed;
+  opacity: 1;
+}
+
+/* KF */
+@keyframes pulse {
+  0% {
+   background-color: #FFFFFF;
+   }
+   8% {
+   background-color: #FFFFFF;
+   }
+   16% {
+   background-color: #babbbf;
+   }
+   24% {
+   background-color: #ff0000;
+   }
+   32% {
+   background-color: #ff00f0;
+   }
+   40% {
+   background-color: #8a00ff;
+   }
+   48% {
+   background-color: #000cff;
+       }
+   56% {
+   background-color: #00deff;
+   }
+   64% {
+   background-color: #00ff00;
+   }
+   72% {
+   background-color: #f6ff00;
+   }
+   80% {
+   background-color: #ff9000;
+   }
+   88% {
+   background-color: #f9f9f9;
+ }
+   95% {
+   background-color: #FFFFFF;
+   }
+ 100% {
+   background-color: #FFFFFF;
+ }
+}
+
+@keyframes blink {
+  0% {
+   background-color: #FFFFFF;
+   }
+   8% {
+   background-color: #FFFFFF;
+   }
+   16% {
+   background-color: #babbbf;
+   }
+   24% {
+   background-color: #ff0000;
+   }
+   32% {
+   background-color: #ff00f0;
+   }
+   40% {
+   background-color: #8a00ff;
+   }
+   48% {
+   background-color: #000cff;
+       }
+   56% {
+   background-color: #00deff;
+   }
+   64% {
+   background-color: #00ff00;
+   }
+   72% {
+   background-color: #f6ff00;
+   }
+   80% {
+   background-color: #ff9000;
+   }
+   88% {
+   background-color: #f9f9f9;
+ }
+   95% {
+   background-color: #FFFFFF;
+   }
+ 100% {
+   background-color: #FFFFFF;
+ }
+}
+
+@keyframes redd {
+  0% {
+   background-color: #ff0000;
+   }
+   8% {
+   background-color: #ff00d4;
+   }
+   16% {
+   background-color: #ffffff;
+   }
+   24% {
+   background-color: #f9cbff;
+   }
+   32% {
+   background-color: #ff0000;
+   }
+   40% {
+   background-color: #8a00ff;
+   }
+   48% {
+   background-color: #b3ffb7;
+       }
+   56% {
+   background-color: #00ff00;
+   }
+   64% {
+   background-color: #ff9a9a;
+   }
+   72% {
+   background-color: #ff3300;
+   }
+   80% {
+   background-color: #fffb00;
+   }
+   88% {
+   background-color: #ff4646;
+ }
+   95% {
+   background-color: #ff0000;
+   }
+ 100% {
+   background-color: #ffffff;
+ }
+}
+
+@keyframes bluue {
+  0% {
+   background-color: #ffffff;
+   }
+   8% {
+   background-color: #a200ff;
+   }
+   16% {
+   background-color: #2600ff;
+   }
+   24% {
+   background-color: #f6b0ff;
+   }
+   32% {
+   background-color: #00b7ff;
+   }
+   40% {
+   background-color: #00f7ff;
+   }
+   48% {
+   background-color: #b3ffb7;
+       }
+   56% {
+   background-color: #00ff00;
+   }
+   64% {
+   background-color: #9ac6ff;
+   }
+   72% {
+   background-color: #0011ff;
+   }
+   80% {
+   background-color: #00f7ff;
+   }
+   88% {
+   background-color: #2600ff;
+ }
+   95% {
+   background-color: #00ff22;
+   }
+ 100% {
+   background-color: #00f7ff;
+ }
+}

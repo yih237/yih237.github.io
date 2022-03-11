@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=League+Gothic&family=Lora:ital@0;1&display=swap");
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url(./assets/Red-Taylors-Version-bg.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgb(73, 73, 73);
+  color: rgb(255, 255, 255);
+}
+
+div {
+  display: block;
+}
+a {
+  color: rgb(141, 54, 54);
+}
+
+a:visited {
+  color: white;
+}
+.wrapper {
+  margin: auto;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+.intro {
+  background-color: rgba(0, 0, 0, 0.49);
+  font-family: "Dosis", sans-serif;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 13vh;
+  transition: box-shadow 0.3s;
+}
+
+.intro:hover {
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.733);
+}
+
+.info {
+  background-color: rgba(0, 0, 0, 0.49);
+  font-family: "Dosis", sans-serif;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 300;
+  margin-top: 10vh;
+  transition: box-shadow 0.3s;
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.info:hover {
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.733);
+}
+table {
+  border-collapse: collapse;
+  line-height: 18px;
+  width: 100%;
+  table-layout: auto;
+  margin: 0 auto;
+}
+table,
+th,
+td {
+  font-size: 20px;
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+}
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
+table td {
+  padding: 2px;
+}
+
+.music {
+  background-color: rgba(0, 0, 0, 0.49);
+  font-family: "Dosis", sans-serif;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 300;
+  margin-top: 10vh;
+  transition: box-shadow 0.3s;
+  font-size: 20px;
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.music:hover {
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.733);
+}
+
+.youtube {
+    background-color: rgba(0, 0, 0, 0.49);
+    font-family: "Dosis", sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 300;
+    margin-top: 10vh;
+    transition: box-shadow 0.3s;
+    font-size: 20px;
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display:flex
+  }
+  
+  .youtube:hover {
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.733);
+  }
+  
+@media screen and (max-width: 600px) {
+  .wrapper {
+    margin: 0;
+  }
+
+  .intro {
+    font-size: 1.4em;
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.733);
+    line-height: 1.1em;
+  }
+
+  .intro:hover {
+    box-shadow: none;
+  }
+
+  .info {
+    font-size: 1.4em;
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.733);
+    line-height: 1.1em;
+  }
+
+  .info:hover {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+  display: block;
+}
+a{
+    color:black
+}
+a:visited{
+color:hotpink;
+}
+a:hover{
+    background-color: hotpink;
+}
+body {
+letter-spacing:normal;
+  font-weight: 400;
+  font-style: normal;
+  font-family: acumin-pro, sans-serif;
+}
+
+.wrapper {
+  margin: 10px auto;
+  padding:10px;
+}
+
+.title{
+    font-size: 18vw;
+    display: flex;
+    margin-bottom:-4vw;
+}
+
+.history{
+columns:2;
+font-size:20px;
+}
+
+.intro {
+ font-size: 33px;
+ margin-bottom: 3.3vh;
+}

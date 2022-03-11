@@ -17,7 +17,6 @@ a:hover{
 }
 body {
 letter-spacing:normal;
-  font-weight: 400;
   font-style: normal;
   font-family: acumin-pro, sans-serif;
 }
@@ -41,4 +40,53 @@ font-size:20px;
 .intro {
  font-size: 33px;
  margin-bottom: 3.3vh;
+}
+
+.specimen{
+  font-size:3.3vw;
+  text-align:center;
+}
+
+.download{
+  font-size:2.5vw;
+  text-align:center;
+}
+
+@media screen and (max-width:600px){
+  .history {
+    columns: 1;
+    font-size: 22px;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    text-align: justify;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid black;}
+
+  .intro {
+    font-size: 28px;
+    margin-bottom: -0.1vh;
+    border-bottom: 1px solid black;
+    padding-bottom: 2vh;
+    text-align: justify;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;}
+
+  .title {    
+    font-size: 18vw;
+    display: flex;
+    margin-bottom: 0vw;
+    border-bottom: 1px solid black;
+    padding-bottom: 1vh;}
+
+  .specimen {
+    font-size: 4.1vw;
+    padding-bottom: 2vh;
+    line-height: 1.3em;
+    border-bottom: 1px solid black;
+  }
+
+  .download{
+    font-size:4vw;
+    text-align:center;
+  }
 }

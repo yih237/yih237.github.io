@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="#" />
+    <title>The Disturbances of The Garden</title>
+    <link rel="stylesheet" href="./5.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="top">
+      <marquee
+        >The <b>disturbances</b> of the garden.The <i>disturbances</i> of the
+        garden</marquee
+      >
+    </div>
+    <div class="dropsh"></div>
+    <div class="a">
+        <p>
+  
+              <textarea rows="5" cols="40" >
+      I end where I began: reading—learning to read and reading books, the words a form of food, a form of life, and then knowledge. But also my mother. I don’t know exactly how old I was when she taught me to read, but I can say for certain that by the time I was three and a half I could read properly.
+    </textarea>
+    </p>
+    <div class="dropdown">
+    <span><h2>This reading of mine</h2></span>
+    <div class="dropdown-content">This reading of mine so interfered with her own time to read that she
+        enrolled me in school; but you could be enrolled in school only if you
+        were five years old, and so she told me to remember to say, if asked, that
+        I was five. My first performance as a writer of fiction? No, not that at
+        all. Perhaps this: the first time I was asked who I was. And who am I? In
+        an ideal world, a world in which the Tree of Life and the Tree of
+        Knowledge stand before me, before all of us, we ask, Who am I? Among the
+        many of us not given a chance to answer is the woman in the library in St.
+        John’s, Antigua, two large rooms above the Treasury Department, a building
+        that was steps away from the customs office and the wharf where things
+        coming and going lay. On that wharf worked a stevedore who loaded onto
+        ships bags of raw sugar en route to England, to be refined into white
+        sugar, which was so expensive that we, in my family, had it only on
+        Sundays, as a special treat. I did not know of the stevedore, the lover of
+        this woman who would not allow her children to have much white sugar
+        because, somewhere in the world of Dr. Pasteur and his cohort, they had
+        come to all sorts of conclusions about diseases and their relationships to
+        food (beriberi was a disease my mother succeeded in saving me from
+        suffering). Her name was Annie Victoria Richardson Drew, and she was born
+        in a village in Dominica, British West Indies. ♦</div>
+</div>
+<div class="TheEND">
+    <span class="particletext confetti">The End</span>
+ </div>
+  </body>
+  <footer>
+      <script>
+    function initparticles() { 
+        confetti(); }
+
+    function confetti() {
+      $.each($(".particletext.confetti"), function(){
+      var confetticount = ($(this).width()/50)*10;
+      for(var i = 0; i <= confetticount; i++) {
+         $(this).append('<span class="particle c' + $.rnd(1,2) + '" style="top:' + $.rnd(10,50) + '%; left:' + $.rnd(0,100) + '%;width:' + $.rnd(6,8) + 'px; height:' + $.rnd(3,4) + 'px;animation-delay: ' + ($.rnd(0,30)/10) + 's;"></span>');
+      }
+   });
+}
+jQuery.rnd = function(m,n) {
+      m = parseInt(m);
+      n = parseInt(n);
+      return Math.floor( Math.random() * (n - m + 1) ) + m;
+}
+
+initparticles();
+
+
+      </script>
+  </footer>
+</html>

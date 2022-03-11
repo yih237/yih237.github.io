@@ -38,5 +38,14 @@
   <footer>
     <script src="./2.js"></script>
     <script src="./flyaroundbox.js"></script>
+    <script>
+      window.onscroll = function(ev) {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+     setTimeout(function() {
+        location.href = "./3.html";
+     }, 13000)
+  }
+};
+    </script>
   </footer>
 </html>

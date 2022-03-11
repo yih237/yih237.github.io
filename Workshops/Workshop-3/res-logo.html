@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Core 2: Interaction Lab / Assignment 3</title>
+    <meta
+      name="description"
+      content="Responsive Logo"
+    />
+    <meta name="author" content="Emily Yi" />
+    <style>
+     .logo {
+       margin: 20px;
+     }
+
+      @media screen and (max-width: 720px) {
+       .full-logo {
+        display:none;
+       }
+       .half-logo {
+        display:none;
+       }
+      .small{
+        display: block;
+      }
+      }
+      @media screen and (max-width: 1118px) {
+       .full-logo{
+         display:none;
+       }
+       .small{
+         display: none;
+       }
+      .half-logo{
+        display: block;
+      }
+      }
+      @media screen and (min-width:1118px){
+        .half-logo {
+        display:none;
+       }
+      .small{
+        display: none;
+       }
+
+       .full-logo{
+         display: block;
+       }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="logo">
+    <div class="full-logo"><img src="./Assets/1.png" alt="Emily Yi Studio"></div>
+    <div class="half-logo"><img src="./Assets/2.png" alt="EY Studio"></div>
+    <div class="small"><img src="./Assets/3.png" alt="EY"></div>
+  </div>
+  </body>
+</html>

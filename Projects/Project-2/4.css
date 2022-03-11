@@ -34,6 +34,7 @@ html, body {
     padding: 35px;
     overflow-y: scroll;
     opacity: 0.7;
+    text-align: justify;
  }
 #a {
     text-decoration: wavy;
@@ -41,3 +42,13 @@ html, body {
  #aa {
      color: rgb(0, 0, 0);
  }
+
+ .pp {
+   color:black
+ }
+
+ .btn{
+position:absolute;
+transform:translate(10,10);
+}
+

@@ -1,0 +1,84 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:400");
+@font-face {
+  font-family: "Helvetica-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Helvetica-Bold-Font.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Helvetica-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Helvetica-Regular.ttf") format("truetype");
+}
+
+@import url("https://px.animaapp.com/624336c60d1f98fcd0ddf1b0.624336c85a542b7d2d4734c0.ywXr0PU.hcp.png");
+
+body{
+margin: 10px;
+}
+p{
+    line-height: 25px;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.subtitle {
+    color: #000000;
+    font-family: "Helvetica", helvetica, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  .subtitle2 {
+    color: #000000;
+    font-family: "helvetica-bold", helvetica, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  .text {
+    color: #000000;
+    font-family: "Helvetica", helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  .title1 {
+    color: #000000;
+    font-family: "helvetica-bold", helvetica, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  .title2 {
+    color: #000000;
+    font-family: "Helvetica", helvetica, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .span14
+{color: #7e7e7e;
+    font-family: "helvetica", helvetica, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    
+}

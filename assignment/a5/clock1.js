@@ -8,14 +8,14 @@ function updateBackground() {
       bstyle.backgroundColor = "black";
       bstyle.color = "white";
       bstyle.backgroundImage = "url('../morning.png')"
-      hello.innerText = "Morning!";
-    }else if(hr > 10 && hr < 16) {
+      hello.innerText = "good morning!";
+    }else if(hr > 10 && hr <= 16) {
         bstyle.backgroundColor = "black";
         bstyle.color = "white";
         bstyle.backgroundImage = "url('../day.png')"
-        hello.innerText = "Morning!";
+        hello.innerText = "good day!";
     }
-     else if (hr > 18 && hr<=20) {
+     else if (hr > 16 && hr<=20) {
       bstyle.backgroundColor = "black";
       bstyle.color = "white";
       bstyle.backgroundImage = "url('../evening.png')"

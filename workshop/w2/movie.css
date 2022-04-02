@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Staatliches&display=swap');
+
+ body {
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background: #363430;
+    font-size:12px;
+  }
+
+
+#poster{
+    position: relative;
+    width:1000px;
+    height:auto;
+    margin:auto;
+    display: flex;
+}
+
+.bg{
+    position: absolute;
+    width: 100%;
+    z-index: -100;
+}
+
+.title{
+    position: absolute;
+    left: 30%;
+    top: 753px;
+    text-align: center;
+}
+h1{
+    font-family: 'Staatliches', sans-serif;
+    font-size: 9em;
+    color: rgb(255 255 255);
+}
+
+.subtitle{
+    left: 793px;
+    top: 192px;
+    position: absolute;
+}
+
+p{
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.4em;
+    color:gray;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 20px;
+    text-align: center;
+}
+
+#large{
+    font-size: 1.9em;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 17px;
+}
+
+.credits{
+    bottom: -1259px;
+    position: relative;
+}

@@ -18,16 +18,6 @@ body {
   font-family: Montserrat;
   font-size: 20px;
   text-align: center;
-  background: hsl(200, 50%, 50%) radial-gradient(circle, transparent, hsl(200, 50%, 30%));
-}
-.title {
-  font-size: 3em;
-  text-align: center;
-  color: #ccc;
-  margin: 0.5em 0; 
-  line-height: 1em;
-  color: #ccc;
-  text-shadow: 0 .1em .1em hsla(0, 0%, 0%, .3);
 }
 .vending-machine {
   display: inline-flex;
@@ -42,23 +32,19 @@ main, aside {
   display: inline-block;
 }
 .frame {
-  width: 14em;
+  width: 18em;
   padding: 1.5em;
   position: relative;
-  background: silver linear-gradient(
-    45deg,
-    hsla(0, 0%, 30%, 1) 0%,
-    hsla(0, 0%, 50%, 1) 66%, 
-    hsla(0, 0%, 70%, 1) 80%
-  );
+  background: rgb(255, 159, 218);
   background-clip: border-box;
 
 }
 .window {
   height: 65%;
+  width:15em;
   padding: .5em;
   box-shadow: 0 0 1em hsla(0, 0%, 0%, 1) inset;
-  background-color: #333;
+  background-color: rgb(86, 61, 126);
   position: absolute;
   overflow: hidden;
 }
@@ -72,7 +58,7 @@ main, aside {
 .row {
   height: 20%;
   width: 100%;
-  border-bottom: .3em black solid;
+  border-bottom: .3em rgb(228, 140, 255) solid;
 }
 .can {
   margin: 0.6em .05em 0;
@@ -90,7 +76,6 @@ main, aside {
   text-align: center;
   text-indent: -1.6em;
   display: block;
-  content: "soda";
   transform: rotate(-90deg) translateY(-.1em);
 }
 .row:nth-child(1) .can {
@@ -112,7 +97,7 @@ main, aside {
 aside {
   position: relative;
   width: 4em; 
-  background-color: hsl(0, 0%, 15%);
+  background-color: hsl(0, 70%, 74%);
 }
 .panel {
   padding-top: 5.5em;
@@ -186,116 +171,106 @@ aside {
 }
 
 .clearfix { display: inline-block; }
-/* start commented backslash hack \*/
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 </style>
   </head>
 <body>
-  <div class="title">
-    SodaPop™
-  </div>
   <div class="vending-machine">
     <main class="frame">
       <div class="window">
         <div class="row">
           <div class="can">
-            <div class="text">soda</div>
           </div>
           <div class="can">
-            <div class="text">soda</div>
           </div>
           <div class="can">
-            <div class="text">soda</div>
           </div>
           <div class="can">
-            <div class="text">soda</div>
           </div>
           <div class="can">
-            <div class="text">soda</div>
           </div>
           <div class="can">
-            <div class="text">soda</div>
           </div>
         </div>
         <div class="row">
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="can">
-            <div class="text">soda</div>
-          </div>
-          <div class="can">
-            <div class="text">soda</div>
-          </div>
-          <div class="can">
-            <div class="text">soda</div>
-          </div>
-          <div class="can">
-            <div class="text">soda</div>
-          </div>
-          <div class="can">
-            <div class="text">soda</div>
-          </div>
-          <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
         </div>
         <div class="row">
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
         </div>
         <div class="row">
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
           </div>
           <div class="can">
-            <div class="text">soda</div>
+ 
+          </div>
+        </div>
+        <div class="row">
+          <div class="can">
+ 
+          </div>
+          <div class="can">
+ 
+          </div>
+          <div class="can">
+ 
+          </div>
+          <div class="can">
+ 
+          </div>
+          <div class="can">
+ 
+          </div>
+          <div class="can">
+ 
           </div>
         </div>
         <div class="arm"></div>

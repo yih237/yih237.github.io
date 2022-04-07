@@ -1,0 +1,425 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="part6-1.css">
+    <title>Part 6 Draft 3</title>
+<style>
+  * {
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: #ccc;
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 20px;
+  text-align: center;
+  background: hsl(200, 50%, 50%) radial-gradient(circle, transparent, hsl(200, 50%, 30%));
+}
+.title {
+  font-size: 3em;
+  text-align: center;
+  color: #ccc;
+  margin: 0.5em 0; 
+  line-height: 1em;
+  color: #ccc;
+  text-shadow: 0 .1em .1em hsla(0, 0%, 0%, .3);
+}
+.vending-machine {
+  display: inline-flex;
+  margin: auto;
+  width: auto;
+  position: relative;
+  box-shadow: 0 .1em .5em hsla(0, 0%, 0%, .3);
+}
+
+main, aside {
+  height: 30em;  
+  display: inline-block;
+}
+.frame {
+  width: 14em;
+  padding: 1.5em;
+  position: relative;
+  background: silver linear-gradient(
+    45deg,
+    hsla(0, 0%, 30%, 1) 0%,
+    hsla(0, 0%, 50%, 1) 66%, 
+    hsla(0, 0%, 70%, 1) 80%
+  );
+  background-clip: border-box;
+
+}
+.window {
+  height: 65%;
+  padding: .5em;
+  box-shadow: 0 0 1em hsla(0, 0%, 0%, 1) inset;
+  background-color: #333;
+  position: absolute;
+  overflow: hidden;
+}
+.frame.bought {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  z-index: 1000;
+}
+.row {
+  height: 20%;
+  width: 100%;
+  border-bottom: .3em black solid;
+}
+.can {
+  margin: 0.6em .05em 0;
+  width: 1.3em; height: 2.7em;
+  position: relative;
+  color: hsl(221, 11%, 71%);
+  display: inline-block;
+  border-bottom: .2em solid;
+  border-top: .15em #ADB2BD solid;
+  border-radius: .5em .5em .3em .3em;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, .5);
+}
+.can .text {
+  font: .9em sans-serif;
+  text-align: center;
+  text-indent: -1.6em;
+  display: block;
+  content: "soda";
+  transform: rotate(-90deg) translateY(-.1em);
+}
+.row:nth-child(1) .can {
+  background-color: hsl(354, 85%, 45%);
+}
+.row:nth-child(2) .can {
+  background-color: hsl(0, 5%, 5%);
+}
+.row:nth-child(3) .can {
+  background-color: hsl(220, 90%, 35%);
+}
+.row:nth-child(4) .can {
+  background-color: hsl(20, 85%, 45%);
+}
+.row:nth-child(5) .can {
+  background-color: hsl(150, 50%, 35%);
+}
+
+aside {
+  position: relative;
+  width: 4em; 
+  background-color: hsl(0, 0%, 15%);
+}
+.panel {
+  padding-top: 5.5em;
+}
+.can.selected {
+  z-index: 900;
+  position: absolute;
+  margin: 0;
+  animation: fallDown ease-in-out 3s;
+  animation-fill-mode: forwards;
+}
+.display {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  font-family: Consolas, monospace;
+  color: hsl(70, 50%, 50%);
+}
+.display.success {
+  animation: blink steps(2, start) 1s 5;
+}
+.display.error {
+  color: hsl(0, 50%, 50%);
+}
+.input button {
+  font-size: .7em;
+  padding: .1em 0 .1em;
+  width: 1.5em; height: 1.5em;
+  margin: .1em;
+  border: none;
+  color: white;
+  background-color: #999;
+  border-radius: .3em;
+  box-shadow: 0 0 .3em hsla(0, 0%, 0%, .5) inset;
+  cursor: pointer;
+}
+.output {
+  width: auto;
+  height: 5em;
+  margin: 1em .75em;
+  background-color: #111;
+  box-shadow: 0 .5em 1em hsla(0, 0%, 50%, .3) inset;
+}
+
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+@keyframes blink {
+  from { visibility: visible; }
+  to { visibility: hidden; }
+}
+@keyframes fallDown {
+  0% {
+    transform: translateY(0em);
+  }
+  50% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  60% {
+    transform: scale(1.2) rotate(5deg);
+  }
+  100% {
+    transform: translateY(20em) rotate(15deg);
+  }
+}
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+</style>
+  </head>
+<body>
+  <div class="title">
+    SodaPop™
+  </div>
+  <div class="vending-machine">
+    <main class="frame">
+      <div class="window">
+        <div class="row">
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+          <div class="can">
+            <div class="text">soda</div>
+          </div>
+        </div>
+        <div class="arm"></div>
+      </div>
+    </main>
+    <div class="frame bought"></div>
+    <aside>
+      <div class="panel">
+        <div class="display">
+          00
+        </div>
+        <div class="input"></div>
+        <div class="output"></div>
+      </div>
+    </aside>
+  </div>
+  
+</body>
+<footer>
+  <script>
+    var $ = function(what, all) { return document["querySelector"+(all?"All":"")](what); }; 
+
+var VendingMachine = function() {
+  
+  var selection = [];
+    
+  var init = function() {
+    
+    createNumbersPanel();
+    bindHandlers();
+    
+  };
+  
+  var createNumbersPanel = function() {
+    
+    for(var i = 0; i < 10; i++) {
+      
+      var button = document.createElement("button");
+      button.classList.add("number");
+      button.textContent = i === 9 ? 0:i + 1;
+      
+      $(".input").appendChild(button);
+      
+    }
+    
+  };
+  
+  var bindHandlers = function() {
+    
+    var handlers = [
+      
+      [$(".number", true), "click", function(e) {
+        
+        var button = e.target;
+        
+        selection.push(parseInt(button.textContent));
+        $(".display").textContent = selection.join("");
+        $(".display").classList.remove("error", "success");
+        
+        if(selection.length === 2) {
+          
+          if(selectProduct(parseInt(selection.join("")))) {
+            $(".display").classList.add("success");
+          }
+          else $(".display").classList.add("error");
+          
+          selection = [];
+
+        }
+        
+        
+      }]
+      
+    ];
+    
+    for(var i in handlers) (function(elements, event, handler) {
+      
+      if(elements.toString() !== "[object NodeList]") elements = [elements];
+
+      for(var j = 0; j < elements.length; j++) elements[j].addEventListener(event, handler);
+            
+    }).apply(true, handlers[i]);
+    
+  };
+  
+  var selectProduct = function(product) {
+    
+    var products = $(".can", true),
+        product = products[product-1];
+    
+    if(typeof product !== "undefined") {
+      
+      var clone = product.cloneNode();
+      
+      clone.innerHTML = '<div class="text">soda</div>';
+      clone.classList.add("selected");
+      
+      var box = product.getBoundingClientRect();
+      
+      clone.style.top = box.top + "px";
+      clone.style.left = box.left + "px";
+      clone.style.backgroundColor = getComputedStyle(product).backgroundColor;
+      
+      $("body").appendChild(clone);
+      
+      return true;
+      
+    }
+    else return false;
+    
+  };
+  
+  return {
+    init: init
+  }
+  
+};
+
+var VM = new VendingMachine();
+
+VM.init();
+
+
+  </script>
+</footer>
+  </html>
+
